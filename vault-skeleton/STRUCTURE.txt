@@ -1,0 +1,15 @@
+# Copier ces dossiers dans un nouveau vault Obsidian (vide)
+
+00-Meta/
+01-Hubs/
+02-Projets/
+03-Vie/
+04-Idees/
+05-Sessions/
+06-Outils/
+07-Identite/
+08-Guides/
+90-Inbox/
+99-Archive/
+conversations/
+templates/
