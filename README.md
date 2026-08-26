@@ -16,6 +16,7 @@ Tu n’as **pas** besoin de comprendre le mot « RAG » pour commencer.
 | **0** | Comprendre l’IA en douceur (optionnel mais utile) | [Présentations Gamma — parcours découverte](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations) |
 | **1** | Comprendre **ce qu’est un RAG** *sans code* | [Série RAG — 3 présentations](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations/RAG-Series) |
 | **1b** | Voir le **produit MAG** (cerveau de notes Obsidian) | [MAG : voici mon cerveau numérique](https://gamma.app/docs/MAG-voici-mon-cerveau-numerique-hvox1ndmko23s4s) |
+| **1c** | Voir le **cerveau connecté** (3 voies + atomes) | [Cerveau connecté : notes, atomes, IA](https://gamma.app/docs/Cerveau-connecte-notes-atomes-IA-pf9ops0ylimxxwd) |
 | **2** | Revenir ici et suivre le **parcours guidé** plus bas | ce README |
 
 ### C’est quoi un « RAG », en français simple ?
@@ -124,6 +125,7 @@ Tu peux tout faire **sans** extension au début : dossiers + liens `[[…]]` suf
 | [AI-Lab-Journal](https://github.com/Peter-Ufens/AI-Lab-Journal) | Hub public — journal, certifs, conventions |
 | [Présentations](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations) | Index Gamma (débutants → pratique) |
 | [MAG : voici mon cerveau numérique](https://gamma.app/docs/MAG-voici-mon-cerveau-numerique-hvox1ndmko23s4s) | Présentation produit : mémoire / vault Obsidian |
+| [Cerveau connecté : notes, atomes, IA](https://gamma.app/docs/Cerveau-connecte-notes-atomes-IA-pf9ops0ylimxxwd) | Présentation pipeline : 3 voies + atomes |
 | [Série RAG](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations/RAG-Series) | Comprendre le RAG **sans code** |
 
 ---
