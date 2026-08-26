@@ -74,6 +74,36 @@ Tu peux **ignorer** Ollama et le RAG au début. L’important = un carnet clair.
 
 ---
 
+
+---
+
+## Obsidian : version et extensions (exemple lab)
+
+Ce template **ne force pas** une version précise d’Obsidian. Recommandation :
+
+| | |
+|---|---|
+| **Application** | [Obsidian](https://obsidian.md) Desktop (Windows / Mac / Linux) · **dernière version stable** |
+| **Vault** | Un dossier local (pas besoin de Sync payant pour démarrer) |
+
+### Extensions communautaires utiles (optionnel)
+
+À installer via **Réglages → Extensions communautaires** (après avoir désactivé le mode restreint). Exemple d’un lab perso (à adapter) :
+
+| Extension | À quoi ça sert (simple) |
+|---|---|
+| **Dataview** | Tableaux / listes à partir de tes notes |
+| **Templater** | Modèles de notes automatiques |
+| **Smart Connections** | Suggestions de liens entre notes |
+| **Note Refactor** | Découper / réorganiser des notes |
+| **Find unlinked files** | Repérer les fichiers orphelins |
+| **Importer** | Importer d’autres formats |
+
+**Pas dans ce template (volontairement) :** clés API, plugins d’API locale exposée, notes personnelles.
+
+Tu peux tout faire **sans** extension au début : dossiers + liens `[[…]]` suffisent.
+
+
 ## Fichiers de ce template
 
 | Fichier | Rôle |
