@@ -18,6 +18,7 @@ Tu n’as **pas** besoin de comprendre le mot « RAG » pour commencer.
 | **1b** | Voir le **produit MAG** (cerveau de notes Obsidian) | [MAG : voici mon cerveau numérique](https://gamma.app/docs/MAG-voici-mon-cerveau-numerique-hvox1ndmko23s4s) |
 | **1c** | Voir le **cerveau connecté** (3 voies + atomes) | [Cerveau connecté : notes, atomes, IA](https://gamma.app/docs/Cerveau-connecte-notes-atomes-IA-pf9ops0ylimxxwd) |
 | **1d** | Comprendre **pourquoi des prénoms** pour les outils IA | [Pourquoi je nomme mes agents / outils avec des noms humains ?](https://gamma.app/docs/Pourquoi-je-nomme-mes-agents-outils-avec-des-noms-humains--of4wq0ipndyg8po) |
+| **1e** | Voir une **installation RAG perso** qui tourne (grand public) | [Mon RAG maison](https://gamma.app/docs/Mon-RAG-maison-retrouver-mes-notes-avec-lIA-rpeta71njsck9it) |
 | **2** | Revenir ici et suivre le **parcours guidé** plus bas | ce README |
 
 ### C’est quoi un « RAG », en français simple ?
