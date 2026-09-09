@@ -9,3 +9,5 @@
 | **Export** | Fichier (souvent ZIP) qui contient une copie de tes conversations. |
 | **Delta** | N’importer que ce qui est **nouveau**, sans tout recopier. |
 | **Template** | Modèle vide réutilisable, sans ta vie privée dedans. |
+| **Graphify** | Outil qui construit une **carte de liens** entre fichiers / code (structure). **Pas** un RAG. Voir [`GRAPHIFY.md`](GRAPHIFY.md). |
+| **graphifyy** | Nom du package PyPI (deux `y`) pour Graphify. |

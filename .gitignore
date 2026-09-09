@@ -2,4 +2,7 @@
 .env
 .DS_Store
 Thumbs.db
+graphify-out/
+**/graphify-out/
+.venv/
 

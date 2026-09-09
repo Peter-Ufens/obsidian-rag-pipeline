@@ -62,6 +62,7 @@ Ce dépôt explique **comment organiser un carnet Obsidian** et, plus tard, le r
 | Une idée claire de pipeline : notes → idées → recherche | Clés API, mots de passe |
 | Config exemple à adapter | Un cloud magique tout fait |
 | Liens vers des présentations **vulgarisées** | Remplacer un cours IA complet |
+| Intro optionnelle **Graphify** (carte structurelle) | Remplacer le RAG · committer un graphe perso |
 
 ---
 
@@ -117,6 +118,8 @@ Tu peux tout faire **sans** extension au début : dossiers + liens `[[…]]` suf
 | `config.example.env` | Chemins à adapter (sans secrets) |
 | `vault-skeleton/` | Arborescence recommandée |
 | `GLOSSAIRE.md` | Mots techniques en français simple |
+| [`GRAPHIFY.md`](GRAPHIFY.md) | Optionnel : carte de liens (≠ RAG) |
+| `.graphifyignore` | Exemple d’exclusions pour Graphify |
 
 ---
 
