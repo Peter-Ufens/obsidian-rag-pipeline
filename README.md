@@ -77,8 +77,10 @@ Tu peux **ignorer** Ollama et le RAG au début. L’important = un carnet clair.
 5. **Copier `config.example.env`** → `config.env` et indique le chemin de ton vault.
 6. Demander à un assistant IA : *« J’ai ce README et ce config.example.env, aide-moi à remplir les chemins sur Windows. Je débute. »*
 
----
+### Optionnel plus tard : carte de liens (Graphify)
 
+Quand ton vault / tes projets grossissent, tu peux ajouter une **carte structurelle** (qui pointe vers quoi).  
+Ce n’est **pas** le RAG. Mode d’emploi public : [`GRAPHIFY.md`](GRAPHIFY.md).
 
 ---
 
