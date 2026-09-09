@@ -1,0 +1,20 @@
+# Exemple public — à adapter. Ne jamais y mettre de secrets en clair.
+.env
+*.env
+**/secrets/**
+**/credentials/**
+**/*PERSONNES*
+*.eml
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+.git/
+node_modules/
+.venv/
+__pycache__/
+graphify-out/
+**/graphify-out/
+*.zip
+*.7z
