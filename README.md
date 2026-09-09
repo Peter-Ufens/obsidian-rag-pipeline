@@ -77,6 +77,11 @@ Tu peux **ignorer** Ollama et le RAG au début. L’important = un carnet clair.
 5. **Copier `config.example.env`** → `config.env` et indique le chemin de ton vault.
 6. Demander à un assistant IA : *« J’ai ce README et ce config.example.env, aide-moi à remplir les chemins sur Windows. Je débute. »*
 
+### Optionnel plus tard : automatiser avec n8n
+
+Quand tu as un lab local (Ollama + index), tu peux **orchestrer** collecte / index depuis n8n via un pont hôte.  
+Schémas **sanitisés** (import JSON, sans secrets) : [`n8n-templates/`](n8n-templates/).
+
 ### Optionnel plus tard : carte de liens (Graphify)
 
 Quand ton vault / tes projets grossissent, tu peux ajouter une **carte structurelle** (qui pointe vers quoi).  
@@ -122,6 +127,7 @@ Tu peux tout faire **sans** extension au début : dossiers + liens `[[…]]` suf
 | `GLOSSAIRE.md` | Mots techniques en français simple |
 | [`GRAPHIFY.md`](GRAPHIFY.md) | Optionnel : carte de liens (≠ RAG) |
 | `.graphifyignore` | Exemple d’exclusions pour Graphify |
+| [`n8n-templates/`](n8n-templates/) | Schémas n8n sanitisés (collecte / RAG delta / query) |
 
 ---
 

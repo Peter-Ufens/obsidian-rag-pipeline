@@ -1,0 +1,12 @@
+{
+  "_comment": "EXAMPLE ONLY for public template. Replace with your own private paths. Never publish real private folder names.",
+  "version": "example",
+  "ragQueryExcludeContains": [
+    "PRIVATE_LIFE_FOLDER",
+    "PRIVATE_CHAT_EXPORTS",
+    "RAW_IDEA_ATOMS",
+    "PERSONAL_JOURNAL",
+    "PEOPLE_ROSTER",
+    "SENSITIVE_INTAKE"
+  ]
+}

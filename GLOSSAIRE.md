@@ -11,3 +11,5 @@
 | **Template** | Modèle vide réutilisable, sans ta vie privée dedans. |
 | **Graphify** | Outil qui construit une **carte de liens** entre fichiers / code (structure). **Pas** un RAG. Voir [`GRAPHIFY.md`](GRAPHIFY.md). |
 | **graphifyy** | Nom du package PyPI (deux `y`) pour Graphify. |
+| **n8n** | Orchestrateur de workflows (souvent en Docker). Ici : déclenche, ne lit pas ton disque directement. |
+| **Pont hôte** | Petit serveur HTTP sur le PC qui lance des scripts **allowlist** pour n8n. Voir [`n8n-templates/`](n8n-templates/). |

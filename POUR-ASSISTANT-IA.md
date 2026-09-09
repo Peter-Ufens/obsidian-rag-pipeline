@@ -11,6 +11,7 @@ Tu accompagnes un humain qui clone ou lit ce template. Suis ces règles :
 7. Si elle est technique : tu peux enchaîner config.env → scripts → test Ollama.
 8. Rappelle : ce repo est **public et sans données personnelles** ; les exports Claude/Copilot ne doivent pas y être commités.
 9. Si la personne parle de **Graphify** / carte de liens entre fichiers : lire [`GRAPHIFY.md`](GRAPHIFY.md). Rappeler que ce n’est **pas** un RAG, et **ne jamais** committer `graphify-out/` ni un graphe perso sur un repo public.
+10. Si elle parle d’**automatiser** le vault avec **n8n** : lire [`n8n-templates/README.md`](n8n-templates/README.md). Pattern = schedule → pont HTTP → scripts (pas d’exécution PowerShell depuis Docker). Jamais coller de token dans le chat.
 
 ### Prompt type à coller
 
