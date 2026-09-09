@@ -1,0 +1,121 @@
+[
+  {
+    "id": "VaultRagQueryTemplate01",
+    "name": "Vault - Query RAG (zone-filtered template)",
+    "active": false,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "rag-vault-query-template",
+          "responseMode": "responseNode",
+          "options": {}
+        },
+        "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2,
+        "position": [0, 0],
+        "webhookId": "rag-vault-query-template"
+      },
+      {
+        "parameters": {
+          "jsCode": "const body = $input.first().json.body || $input.first().json;\nconst query = (body.query || body.q || body.message || '').toString().trim();\nconst limit = Number(body.limit || 5);\nif (!query) {\n  return [{ json: { error: true, reply: 'query missing' } }];\n}\nreturn [{ json: { query, limit } }];"
+        },
+        "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+        "name": "Parse query",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [240, 0]
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "http://host.docker.internal:11434/api/embeddings",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ model: 'nomic-embed-text', prompt: $json.query }) }}",
+          "options": { "timeout": 120000 }
+        },
+        "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+        "name": "Ollama Embeddings",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [480, 0]
+      },
+      {
+        "parameters": {
+          "jsCode": "const prev = $('Parse query').item.json;\nconst emb = $input.first().json.embedding;\nif (!emb) {\n  return [{ json: { error: true, reply: 'embedding missing', query: prev.query } }];\n}\n// Load your PRIVATE exclude list at runtime (env / file), not hard-coded secrets.\n// Example motifs from zones.example.json only:\nconst excludes = ['PRIVATE_LIFE_FOLDER','PRIVATE_CHAT_EXPORTS','RAW_IDEA_ATOMS','PERSONAL_JOURNAL','PEOPLE_ROSTER','SENSITIVE_INTAKE'];\nconst must_not = excludes.map((p) => ({ key: 'sourceFile', match: { text: p } }));\nconst fetchLimit = Math.max(Number(prev.limit || 5) * 4, 20);\nreturn [{ json: { query: prev.query, limit: prev.limit, fetchLimit, embedding: emb, zoneFilter: { must_not }, excludes } }];"
+        },
+        "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
+        "name": "Pack vector",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [720, 0]
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "http://host.docker.internal:6334/collections/vault-text/points/search",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ vector: $json.embedding, limit: $json.fetchLimit, with_payload: true, filter: $json.zoneFilter }) }}",
+          "options": { "timeout": 60000 }
+        },
+        "id": "e5f6a7b8-c9d0-1234-efab-345678901234",
+        "name": "Qdrant Search",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [960, 0]
+      },
+      {
+        "parameters": {
+          "jsCode": "const prev = $('Parse query').item.json;\nconst pack = $('Pack vector').item.json;\nconst raw = $input.first().json;\nconst excludes = pack.excludes || [];\nfunction excluded(path) {\n  if (!path) return true;\n  const n = String(path);\n  return excludes.some((p) => n.includes(p));\n}\nlet hits = (raw.result || []).filter((h) => !excluded(h.payload && h.payload.sourceFile)).map((h) => ({\n  score: h.score,\n  file: h.payload && h.payload.source_filename,\n  path: h.payload && h.payload.sourceFile,\n  excerpt: h.payload && h.payload.text ? String(h.payload.text).slice(0, 280) : null\n}));\nhits = hits.slice(0, Number(prev.limit || 5));\nreturn [{ json: { ok: true, agent: 'vault-rag', query: prev.query, zoneFilter: true, hits } }];"
+        },
+        "id": "f6a7b8c9-d0e1-2345-fabc-456789012345",
+        "name": "Format hits",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [1200, 0]
+      },
+      {
+        "parameters": {
+          "respondWith": "json",
+          "responseBody": "={{ $json }}",
+          "options": {}
+        },
+        "id": "a7b8c9d0-e1f2-3456-abcd-567890123456",
+        "name": "Respond",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "typeVersion": 1.1,
+        "position": [1440, 0]
+      }
+    ],
+    "connections": {
+      "Webhook": {
+        "main": [[{ "node": "Parse query", "type": "main", "index": 0 }]]
+      },
+      "Parse query": {
+        "main": [[{ "node": "Ollama Embeddings", "type": "main", "index": 0 }]]
+      },
+      "Ollama Embeddings": {
+        "main": [[{ "node": "Pack vector", "type": "main", "index": 0 }]]
+      },
+      "Pack vector": {
+        "main": [[{ "node": "Qdrant Search", "type": "main", "index": 0 }]]
+      },
+      "Qdrant Search": {
+        "main": [[{ "node": "Format hits", "type": "main", "index": 0 }]]
+      },
+      "Format hits": {
+        "main": [[{ "node": "Respond", "type": "main", "index": 0 }]]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "callerPolicy": "workflowsFromSameOwner"
+    },
+    "versionId": "template-0000-0000-0000-000000000001"
+  }
+]
