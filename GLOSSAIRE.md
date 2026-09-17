@@ -1,5 +1,10 @@
 # Glossaire (français simple)
 
+> **Ce fichier n’est PAS** le glossaire de recherche privé (vocabulaire dicté),  
+> **ni** le « lexique évolutif » (outil d’observation / backtest, STOP après G2).  
+> Ici : **lexique pédagogique** pour lire le template et les docs publiques.  
+> Mécanisme de lecture du glossaire privé : dépôt public [`iris-mcp-server`](https://github.com/Peter-Ufens/iris-mcp-server) (`rag-search-v2`, variable `RAG_GLOSSARY_FILE`).
+
 | Mot | Signification |
 |---|---|
 | **Vault** | Le dossier Obsidian qui contient toutes tes notes. |
