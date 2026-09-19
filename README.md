@@ -16,7 +16,7 @@ Tu n’as **pas** besoin de comprendre le mot « RAG » pour commencer.
 | **0** | Comprendre l’IA en douceur (optionnel mais utile) | [Présentations Gamma — parcours découverte](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations) |
 | **1** | Comprendre **ce qu’est un RAG** *sans code* | [Série RAG — 3 présentations](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations/RAG-Series) |
 | **1b** | Voir le **produit MAG** (cerveau de notes Obsidian) | [MAG : voici mon cerveau numérique](https://gamma.app/docs/MAG-voici-mon-cerveau-numerique-hvox1ndmko23s4s) |
-| **1c** | Voir le **cerveau connecté** (3 voies + atomes) | [Cerveau connecté : notes, atomes, IA](https://gamma.app/docs/Cerveau-connecte-notes-atomes-IA-pf9ops0ylimxxwd) |
+| **1c** | Voir le zoom **planète → atome** (3 voies MAG) | [De la planète à l'atome](https://gamma.app/docs/De-la-planete-a-latome-pf9ops0ylimxxwd) |
 | **1d** | Comprendre **pourquoi des prénoms** pour les outils IA | [Pourquoi je nomme mes agents / outils avec des noms humains ?](https://gamma.app/docs/Pourquoi-je-nomme-mes-agents-outils-avec-des-noms-humains--of4wq0ipndyg8po) |
 | **1e** | Voir une **installation RAG perso** qui tourne (grand public) | [Mon RAG maison](https://gamma.app/docs/Mon-RAG-maison-retrouver-mes-notes-avec-lIA-rpeta71njsck9it) |
 | **2** | Revenir ici et suivre le **parcours guidé** plus bas | ce README |
@@ -138,7 +138,7 @@ Tu peux tout faire **sans** extension au début : dossiers + liens `[[…]]` suf
 | [AI-Lab-Journal](https://github.com/Peter-Ufens/AI-Lab-Journal) | Hub public — journal, certifs, conventions |
 | [Présentations](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations) | Index Gamma (débutants → pratique) |
 | [MAG : voici mon cerveau numérique](https://gamma.app/docs/MAG-voici-mon-cerveau-numerique-hvox1ndmko23s4s) | Présentation produit : mémoire / vault Obsidian |
-| [Cerveau connecté : notes, atomes, IA](https://gamma.app/docs/Cerveau-connecte-notes-atomes-IA-pf9ops0ylimxxwd) | Présentation pipeline : 3 voies + atomes |
+| [De la planète à l'atome](https://gamma.app/docs/De-la-planete-a-latome-pf9ops0ylimxxwd) | Présentation pipeline MAG : zoom planète→atome · 3 voies (ex « Cerveau connecté ») |
 | [Noms humains pour les outils IA](https://gamma.app/docs/Pourquoi-je-nomme-mes-agents-outils-avec-des-noms-humains--of4wq0ipndyg8po) | Méthode de nommage : rôles, annuaire MAG, dictée |
 | [Série RAG](https://github.com/Peter-Ufens/AI-Lab-Journal/tree/main/presentations/RAG-Series) | Comprendre le RAG **sans code** |
 
